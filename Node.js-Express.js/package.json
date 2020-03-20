@@ -1,0 +1,16 @@
+{
+  "name": "til-docker-node.js-express",
+  "version": "1.0.0",
+  "description": "docker-node-express-testing-image",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.18.2"
+  }
+}
