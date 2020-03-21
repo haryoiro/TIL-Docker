@@ -1,7 +1,6 @@
 FROM node:12-slim
 WORKDIR /web:/
 COPY package*.json ./
-RUN npm i -g nodemon
 RUN npm install
 COPY . .
 EXPOSE 3000

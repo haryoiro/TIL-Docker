@@ -1,23 +1,14 @@
 const express = require('express')
 const app = express()
 
-const { Pool }= require('pg')
-const pgConf = {
-  user: "postgres",
-  database: "example",
-  password: "postgress",
-  host: "db",
-  port: "5432",
-  max: 10,
-  idleTimeoutMillis: 30000
-}
+// setup view engin
+app.set('view engine', 'pug')
 
-const pool = new Pool(pgConf)
 
 app.get('/', (req, res) => {
-  res.send('hello world')
+  res.render('home')
 })
 
 app.listen(3000, () => {
-  console.log('My REST API running on port 3000')
+  console.log('SERVER running on port 3000')
 })

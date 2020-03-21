@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
   web:
-    container_name: neoauth
+    container_name: node-express
     restart: always
     build: .
     links:
