@@ -12,9 +12,12 @@ services:
       - "5432:5432"
   web:
     container_name: neoauth
-    restart: always
     build: .
+    restart: on-failure
     links:
       - db
     ports:
       - "3000:3000"
+    volumes:
+      - ./package.json:/usr/src/app/package.json
+      - ./app.js:/usr/src/app/app.js
